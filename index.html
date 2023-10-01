@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sortify</title>
+
+    <!-- Include Font Awesome CSS library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha384-i8L3ti7kOwjytkyHpGczN5wvx9vE0j/kRrFCm0dPBk5aF7s5B/ATyJy7DspvIrtJ" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom CSS for Sortify */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('organize.jpeg'); /* Set the background image */
+            background-size: cover;
+        }
+
+        header {
+            background-color: rgba(0, 120, 212, 0.8);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        header img {
+            max-width: 100%; /* Automatically adjust logo size */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 10px 0;
+        }
+
+        header p {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        main {
+            text-align: center;
+            margin: 20px;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 12px 24px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #00569e;
+        }
+
+        #statusMessage {
+            font-size: 16px;
+            color: green;
+            margin-top: 20px;
+        }
+
+        /* Make "Choose File" label text bold */
+        label[for="fileInput"] {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Sortify Logo">
+        <h1>Sortify</h1>
+        <p>Organize your files</p>
+    </header>
+    <main>
+        <label for="fileInput" style="display: block;">
+            <i class="fas fa-upload"></i> Choose File
+        </label>
+        <input type="file" id="fileInput" multiple style="display: none;">
+        <button id="sortButton"><i class="fas fa-sort"></i> Sort Files</button>
+        <button id="undoButton"><i class="fas fa-undo"></i> Undo Sorting</button>
+        <p id="statusMessage"></p>
+
+        <!-- Login and Dashboard Links -->
+        <div>
+            <a href="login.php" class="button-link">Login</a>
+            <a href="dashboard.php" class="button-link">Dashboard</a>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

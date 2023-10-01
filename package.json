@@ -1,0 +1,11 @@
+{
+  "name": "sortify",
+  "version": "1.0.0",
+  "description": "file organizer",
+  "main": "script.js",
+  "scripts": {
+    "test": "npm install sportify"
+  },
+  "author": "Alade Oluwafemi",
+  "license": "MIT"
+}
